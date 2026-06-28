@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stealth Technology Simulator</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="app">
+    <h2>ステルス技術シミュレーター (TypeScript)</h2>
+    
+    <div class="canvas-container">
+      <canvas id="simCanvas" width="800" height="400"></canvas>
+    </div>
+
+    <div class="control-panel">
+      <div class="control-group">
+        <label for="shapeSelect">機体形状:</label>
+        <select id="shapeSelect">
+          <option value="conventional">従来型戦闘機 (デルタ翼)</option>
+          <option value="faceted">多面体ステルス (F-117風)</option>
+          <option value="flyingwing">全翼機 (B-2風)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="radarAngle">レーダー照射角: <span id="angleVal">0</span>°</label>
+        <input type="range" id="radarAngle" min="-90" max="90" value="0">
+      </div>
+
+      <div class="control-group">
+        <label for="absorption">電波吸収材 (RAM) 効率: <span id="absVal">50</span>%</label>
+        <input type="range" id="absorption" min="0" max="100" value="50">
+      </div>
+
+      <div class="rcs-display">
+        <strong>計算されたRCS (レーダー反射断面積):</strong>
+        <span id="rcsValue">0.50</span> ㎡
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

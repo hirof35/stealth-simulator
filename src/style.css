@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#app {
+  width: 820px;
+  padding: 20px;
+  background-color: #262626;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #4caf50;
+}
+
+.canvas-container {
+  border: 2px solid #444;
+  background-color: #050505;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+.control-panel {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+select, input[type="range"] {
+  padding: 8px;
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.rcs-display {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-left: 5px solid #4caf50;
+  border-radius: 4px;
+}
+
+#rcsValue {
+  color: #ff5722;
+  font-weight: bold;
+}
